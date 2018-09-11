@@ -52,5 +52,20 @@ public class SimpleArray {
       System.out.println(sum);
 
     }
+    
+    /**
+     * creates a new array of doubles that is a copy of the original array
+     * @param the source of the array that will be copied, it can be null
+     * @return a copy of the array, if source is null, it returns a null value
+     */
+    public static double[] copy(double[] source) {
+        if (source == null) 
+            return null;
+            double[] cpy;
+            cpy = new double[source.length]; 
+            System.arraycopy(source, 0, cpy, 0, source.length);
+            return cpy;
+        
+    }
 
 }
